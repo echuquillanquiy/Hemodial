@@ -28,6 +28,7 @@ return new class extends Migration
             $table->string('code')->unique();
             $table->string('access');
             $table->string('sequence');
+            $table->enum('status', ['REFERENCIADO', 'FALLECIDO', 'ACTIVO']);
 
             $table->timestamps();
         });
